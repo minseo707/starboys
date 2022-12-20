@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별보래 가게</title>
+    
+
+    <style>
+
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+        .bone {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .starStack1 {
+            position: absolute;
+            width: 150vw;
+            height: 150vh;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        .starStack2 {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        .starStack3 {
+            position: absolute;
+            width: 80vw;
+            height: 80vh;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+        #title{
+            position: absolute;
+            top:45vh;
+            right:42.5vw;
+            z-index: 9999;
+            font-family: PyeongChangPeace-Light;
+            color: goldenrod;
+            transition: 0.5s;
+            font-size: 32px;
+            text-decoration-line: none;
+        }
+
+        #title:hover{
+            color: whitesmoke; 
+        }
+        
+    </style>
+</head>
+<body style="margin: 0; padding: 0; overflow: hidden; background-image: url('1_blue-sky-stars-night-242591.png'); filter: brightness(70%);">
+    <div class="bone">
+        <a id="title" href="index.html">제주 별보래 가게</a>
+        <img src="3_starfields1.png" class="starStack1">
+        <img src="3_starfields1.png" class="starStack2">
+        <img src="3_starfields1.png" class="starStack3">
+
+    </div>
+
+    <script>
+
+        const starStack1 = document.querySelector(".starStack1");
+
+        document.addEventListener("mousemove", (e) => {
+
+            const mouseX = e.clientX;
+
+            const mouseY = e.clientY;
+
+            starStack1.style.left = mouseX / 8 - screen.width / 5 + 'px';
+
+            starStack1.style.top = mouseY / 8 - screen.height / 10 + 'px';
+
+        });
+
+        const starStack2 = document.querySelector(".starStack2");
+
+        document.addEventListener("mousemove", (e) => {
+
+            const mouseX = e.clientX;
+
+            const mouseY = e.clientY;
+
+            starStack2.style.left = mouseX / 20 + 'px';
+
+            starStack2.style.top = mouseY / 20 + 'px';
+
+        });
+
+        const starStack3 = document.querySelector(".starStack3");
+
+        document.addEventListener("mousemove", (e) => {
+
+            const mouseX = e.clientX;
+
+            const mouseY = e.clientY;
+
+            starStack3.style.left = mouseX / 40 + 'px';
+
+            starStack3.style.top = mouseY / 40 + 'px';
+
+        });
+
+
+    </script>
+</body>
+</html>
